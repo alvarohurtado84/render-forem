@@ -5,10 +5,6 @@ services:
     autoDeploy: false
     plan: free
     repo: https://github.com/render-examples/redis.git
-    disk:
-      name: data
-      mountPath: /var/lib/redis
-      sizeGB: 2
 
   - type: worker
     name: sidekiq
@@ -44,10 +40,6 @@ services:
     dockerCommand: ./scripts/rails.sh
     plan: free
     autoDeploy: false
-    disk:
-      name: data
-      mountPath: /opt/apps/forem/public/uploads
-      sizeGB: 10
     envVars:
       - fromGroup: rails
       - key: REDIS_HOST
