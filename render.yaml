@@ -10,7 +10,7 @@ services:
     dockerfilePath: ./forem/Dockerfile
     dockerContext: ./forem
     dockerCommand: ./scripts/sidekiq.sh
-    plan: standard
+    plan: starter
     autoDeploy: false
     envVars:
       - fromGroup: rails
@@ -36,7 +36,7 @@ services:
     dockerfilePath: ./forem/Dockerfile
     dockerContext: ./forem
     dockerCommand: ./scripts/rails.sh
-    plan: standard
+    plan: free
     autoDeploy: false
     disk:
       name: data
@@ -62,7 +62,7 @@ services:
 
 databases:
   - name: forem
-    plan: starter
+    plan: free
 
 envVarGroups:
   - name: rails
