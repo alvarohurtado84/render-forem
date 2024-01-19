@@ -38,10 +38,6 @@ services:
     dockerCommand: ./scripts/rails.sh
     plan: free
     autoDeploy: false
-    disk:
-      name: data
-      mountPath: /opt/apps/forem/public/uploads
-      sizeGB: 10
     envVars:
       - fromGroup: rails
       - key: REDIS_HOST
