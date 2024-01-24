@@ -36,12 +36,8 @@ services:
     dockerfilePath: ./forem/Dockerfile
     dockerContext: ./forem
     dockerCommand: ./scripts/rails.sh
-    plan: starter
+    plan: free
     autoDeploy: false
-    disk:
-      name: data
-      mountPath: /opt/apps/forem/public/uploads
-      sizeGB: 10
     envVars:
       - fromGroup: rails
       - key: REDIS_HOST
@@ -62,7 +58,7 @@ services:
 
 databases:
   - name: forem
-    plan: free
+    plan: starter
 
 envVarGroups:
   - name: rails
