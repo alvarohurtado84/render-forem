@@ -1,13 +1,8 @@
 services:
-  - type: pserv
-    name: redis
-    env: docker
-    autoDeploy: false
-    repo: https://github.com/render-examples/redis.git
-    disk:
-      name: data
-      mountPath: /var/lib/redis
-      sizeGB: 10
+  - type: redis
+    name: private-redis
+    ipAllowList: []
+    plan: free
 
   - type: worker
     name: sidekiq
