@@ -2,10 +2,6 @@ services:
   - type: redis
     name: private-redis
     plan: starter
-    disk:
-      name: data
-      mountPath: /var/lib/redis
-      sizeGB: 10
 
   - type: worker
     name: sidekiq
