@@ -1,6 +1,7 @@
 services:
   - type: redis
     name: private-redis
+    ipAllowList: []
     plan: starter
 
   - type: worker
