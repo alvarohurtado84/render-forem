@@ -36,7 +36,7 @@ services:
     dockerfilePath: ./forem/Dockerfile
     dockerContext: ./forem
     dockerCommand: ./scripts/rails.sh
-    plan: starter
+    plan: standard
     autoDeploy: false
     disk:
       name: data
